@@ -2,9 +2,9 @@ require 'pry'
 
 def run_guessing_game
   user_input = gets_user_input
-  if random_num = user_input
+  if random_num.to_s = user_input
     got_it
-  elsif random_num != user_input &&
+  elsif random_num.to_s != user_input &&
      user_input != 'exit'
     no_sir
 end
