@@ -2,7 +2,17 @@ require 'pry'
 
 def run_guessing_game
   random  = rand(6)+1
-  binding.pry
+  input = gets.chomp
+  puts "guess the number, one to six"
+  if input == random.to_s
+    puts "You guessed the correct number!"
+  elsif input == "exit"
+    puts Goodbye!
+  else
+    puts "Sorry! The computer guessed #{random}."
+
+
+  end
 end
 
 
