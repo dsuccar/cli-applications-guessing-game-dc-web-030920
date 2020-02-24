@@ -1,36 +1,13 @@
-require 'pry'
-
 def run_guessing_game
-  user_input = gets_user_input
-  if random_num.to_s = user_input
-    got_it
-  elsif random_num.to_s != user_input &&
-     user_input != 'exit'
-    no_sir
-end
-  if user_input = 'exit'
-    exit_words
-end
-end
-
-def random_num
-  num = rand(1..6)
-  num
+  rando = rand(6)+1
+  puts "Guess a number between 1 and 6:"
+  input = gets.chomp
+  if input == rando.to_s
+    puts "You guessed the correct number!"
+  elsif input.downcase == "exit"
+    puts "Goodbye!"
+  else
+    puts "Sorry! The computer guessed #{rando}."
+  end
 end
 
-def gets_user_input
-  gets
-end
-
-def got_it
- puts  'You guessed the correct number!'
-end
-
-def no_sir
-  puts "Sorry! The computer guessed #{random_num}."
-
-end
-
-def exit_words
-puts "Goodbye!"
-end
